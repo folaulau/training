@@ -12,3 +12,4 @@ docker-sync.yml
 gradle
 node
 node_modules
+frontend/bundles/bundle-default/.env

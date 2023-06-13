@@ -21,6 +21,7 @@
     "css-loader": "6.2.0",
     "css-vars-ponyfill": "1.8.0",
     "cssnano": "4.1.10",
+    "env-cmd": "^10.1.0",
     "eslint": "8.21.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard": "17.0.0",
@@ -58,7 +59,7 @@
     "sanitize.css": "7.0.1"
   },
   "scripts": {
-    "build": "yarn run eslint . && webpack --config webpack.prod.js && node node_modules/@brightspot/styleguide/build/bundle -b build/styleguide -o build/theme.zip",
+    "build": "yarn run eslint . && webpack --config webpack.prod.js && env-cmd -x node node_modules/@brightspot/styleguide/build/bundle -b build/styleguide -o build/theme.zip \\$STYLEGUIDE_SKIP_SCREENSHOTS",
     "format": "yarn run eslint . --fix",
     "profile": "webpack --config webpack.profile.js",
     "server:styleguide": "webpack serve --config webpack.dev.js",
