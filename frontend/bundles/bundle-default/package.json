@@ -59,7 +59,7 @@
     "sanitize.css": "7.0.1"
   },
   "scripts": {
-    "build": "yarn run eslint . && webpack --config webpack.prod.js && env-cmd -x node node_modules/@brightspot/styleguide/build/bundle -b build/styleguide -o build/theme.zip \\$STYLEGUIDE_SKIP_SCREENSHOTS",
+    "build": "yarn run eslint . && webpack --config webpack.prod.js && env-cmd -x node node_modules/@brightspot/styleguide/build/bundle -b build/styleguide -o build/theme.zip \\$STYLEGUIDE_OPTS",
     "format": "yarn run eslint . --fix",
     "profile": "webpack --config webpack.profile.js",
     "server:styleguide": "webpack serve --config webpack.dev.js",
