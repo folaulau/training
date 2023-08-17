@@ -1,6 +1,7 @@
 package brightspot.article;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -172,6 +173,19 @@ public class Article extends Content implements
     private String body;
 
     private ArticleLead lead;
+
+    private List<String> words;
+
+    public List<String> getWords() {
+        if (this.words == null || this.words.isEmpty()) {
+            return Arrays.asList("test1", "test2");
+        }
+        return this.words;
+    }
+
+    public void setWords(List<String> words) {
+        this.words = words;
+    }
 
     public String getFullBody() {
         return getBody();
